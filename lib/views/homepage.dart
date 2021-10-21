@@ -46,6 +46,18 @@ class homepage extends StatelessWidget {
               ],
             ),
           ),
+          // Expanded(child: Obx(() {
+          //   return StaggeredGridView.countBuilder(
+          //       crossAxisCount: 2,
+          //       itemCount: productController.productList.length,
+          //       mainAxisSpacing: 16,
+          //       crossAxisSpacing: 16,
+          //       itemBuilder: (context, index) {
+          //         print("data${productController.productList.length}");
+          //         return ProductTile(productController.productList[index]);
+          //       },
+          //       staggeredTileBuilder: (index) => StaggeredTile.fit(1));
+          // })),
           Expanded(
             child: StaggeredGridView.countBuilder(
                 crossAxisCount: 2,
@@ -57,7 +69,7 @@ class homepage extends StatelessWidget {
                   return ProductTile(productController.productList[index]);
                 },
                 staggeredTileBuilder: (index) => StaggeredTile.fit(1)),
-          )
+          ),
         ],
       ),
     );
