@@ -9,8 +9,11 @@ import 'package:shopping/services/remote_services.dart';
 
 class ProductController extends GetxController {
   // var productList = <Welcome>[].obs;
+
+  //WE'LL LIST THE ITEMS HERE IN THIS CONTROLLER THAT WE NEED TO BIND TO THE UI
+
   var isLoading = true.obs;
-  var productList = <Welcome>[];
+  var productList = <Welcome>[].obs; // LIST OF PRODUCTS
   //Welcome will be fetched from the product.dart usign Welcome class
   //late Welcome welcome;s
   @override

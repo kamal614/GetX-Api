@@ -59,7 +59,7 @@ class homepage extends StatelessWidget {
           //       staggeredTileBuilder: (index) => StaggeredTile.fit(1));
           // })),
           Expanded(
-            child: StaggeredGridView.countBuilder(
+            child: Obx(() => StaggeredGridView.countBuilder(
                 crossAxisCount: 2,
                 itemCount: productController.productList.length,
                 mainAxisSpacing: 16,
@@ -68,7 +68,7 @@ class homepage extends StatelessWidget {
                   print("data${productController.productList.length}");
                   return ProductTile(productController.productList[index]);
                 },
-                staggeredTileBuilder: (index) => StaggeredTile.fit(1)),
+                staggeredTileBuilder: (index) => StaggeredTile.fit(1))),
           ),
         ],
       ),
